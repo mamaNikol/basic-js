@@ -4,9 +4,12 @@ module.exports = function createDreamTeam(arr) {
  if (!Array.isArray(members)){
  return false;
 }
-  let str = '';
+ if (!Array.isArray(members)){
+ return false;
+}
+let str = '';
   for(let i = 0; i < members.length; i++){
-    if(typeof members[i] == 'string'){
+    if(typeof members[i] === 'string'){
       str += members[i].trim()[0];
     }
   }
